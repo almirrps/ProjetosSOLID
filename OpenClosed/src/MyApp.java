@@ -5,10 +5,12 @@ public class MyApp {
 
 	public static void main(String[] args) {
 		
-		//Criando o objeto principal
+		//Criando os objetos principais
 		ContaCorrente contaCorrente = new ContaCorrente();
+		ContaPoupanca contaPoupanca = new ContaPoupanca();
 		
-		//Executando os métodos vinculados ao objeto principal
+		//Executando os métodos vinculados aos objetos principais
+		System.out.println("***Movimentações de Conta Corrente***");
 		contaCorrente.emitirComprovante();
 		
 		String strDataIni = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
@@ -17,6 +19,10 @@ public class MyApp {
 		
 		contaCorrente.debitarValor(10);
 		contaCorrente.validarSaldo(30);
+		
+		System.out.println("");
+		System.out.println("***Movimentações de Conta Poupanca***");
+		contaPoupanca.debitarValor(25);
 
 	}
 

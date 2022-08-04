@@ -2,13 +2,13 @@
 public class ContaCorrente {
 
 	private ComprovanteContaCorrente comprovante;
-	private DebitoContaCorrente debito;
+	private DebitoContaCorrente debitoContaCorrente;
 	private SaldoContaCorrente saldo;
 	
 	//Criando os subsistemas
 	public ContaCorrente() {
 		comprovante = new ComprovanteContaCorrente();
-		debito = new DebitoContaCorrente();
+		debitoContaCorrente = new DebitoContaCorrente();
 		saldo = new SaldoContaCorrente();
 	}
 	
@@ -21,7 +21,7 @@ public class ContaCorrente {
 	}
 
 	public void debitarValor(int valor) {
-		debito.debitarConta(valor);
+		debitoContaCorrente.debitarConta(valor);
 	}
 	
 	public void validarSaldo(int valor) {
